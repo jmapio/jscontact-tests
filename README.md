@@ -53,7 +53,7 @@ The following backend config is using the Cyrus backend, authenticating
 JMAP requests as user `cassandane` and password `secret`. The JMAP server
 is assumed to listen on host `localhost` and port `9101`:
 
-    cyrus:cassandane:test:localhost:9101
+    cyrus:cassandane:secret:localhost:9101
 
 The following backend config is using the CNR backend that listens
 at URL `http://localhost:8080/convert`:
