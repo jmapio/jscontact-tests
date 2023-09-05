@@ -14,7 +14,7 @@ The tests run on Python 3.11.4 or later. Maybe they'll run on earlier versions, 
 
 ### Get the test sources
 
-Fetch the latest sources from [https://github.com/rsto/jscontact-tests/](https://github.com/rsto/jscontact-tests/).
+Fetch the latest sources from [https://github.com/jmapio/jscontact-tests/](https://github.com/jmapio/jscontact-tests/).
 Change into the `jscontact-tests` directory.
 
 ### Create a Python virtual environment
