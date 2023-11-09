@@ -1065,6 +1065,54 @@ jscontact_tests: list[TestCase] = [
         ],
     ),
     TestCase(
+        "addresses_defaultseparator_rfc6868",
+        {
+            "addresses": {
+                "a1": {
+                    "components": [
+                        {"kind": "name", "value": "name"},
+                        {"kind": "region", "value": "region"},
+                    ],
+                    "defaultSeparator": "\nx^y\"z",
+                    "isOrdered": True,
+                }
+            },
+        },
+        [
+            PropMatch(
+                "ADR",
+                ComponentsValue(
+                    [
+                        "",  # pobox
+                        "",  # extadr
+                        "name",  # street
+                        "",  # locality
+                        "region",  # region
+                        "",  # postal code
+                        "",  # country
+                        "",  # room
+                        "",  # apartment
+                        "",  # floor
+                        "",  # street number
+                        "name",  # street name
+                        "",  # building
+                        "",  # block
+                        "",  # subdistrict
+                        "",  # distrcit
+                        "",  # landmark
+                        "",  # cardinal direction
+                    ]
+                ),
+                [
+                    ParamMatch("JSCOMPS", '"' + "s,^nx^^y^'z;11;4" + '"'),
+                    ParamMatch("PROP-ID", "a1"),
+                    ParamMatch("LABEL", "name^nx^^y^'zregion", mandatory=False),
+                ],
+                alt_id=AltIdMatch("1", mandatory=False),
+            ),
+        ],
+    ),
+    TestCase(
         "cryptoKeys",
         {
             "cryptoKeys": {
