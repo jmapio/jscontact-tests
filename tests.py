@@ -647,7 +647,7 @@ jscontact_tests: list[TestCase] = [
         {
             "titles": {
                 "le9": {"kind": "title", "name": "Research Scientist"},
-                "k2": {"kind": "role", "name": "Project Leader", "organization": "o2"},
+                "k2": {"kind": "role", "name": "Project Leader", "organizationId": "o2"},
             },
             "organizations": {"o2": {"name": "ABC"}},
         },
