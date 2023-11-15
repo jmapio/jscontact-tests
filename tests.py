@@ -1022,7 +1022,7 @@ jscontact_tests: list[TestCase] = [
                         "LABEL",
                         MaybeQuoted("2-7-2 Marunouchi, Chiyoda-ku, Tokyo 100-8994"),
                     ),
-                    ParamMatch("JSCOMPS", '"s,\, ;13;s,-;10;s, ;15;3;4;s, ;5"'),
+                    ParamMatch("JSCOMPS", '"s,\\, ;13;s,-;10;s, ;15;3;4;s, ;5"'),
                     ParamMatch("PROP-ID", "k26"),
                 ],
                 alt_id=AltIdMatch("1", mandatory=False),
